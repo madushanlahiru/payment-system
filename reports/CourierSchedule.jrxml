@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CourierSchedule" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b62a1d4b-4eb6-49e6-8db6-49b9008ba0ca">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="User" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Branch" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="facilityNo" class="java.lang.String"/>
+	<field name="chequeType" class="java.lang.String"/>
+	<field name="chequeNo" class="java.lang.Integer"/>
+	<field name="chequeAmount" class="java.lang.Double"/>
+	<variable name="count" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{count} >= 0 ? 1 : null]]></variableExpression>
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<title>
+		<band height="151" splitType="Stretch">
+			<staticText>
+				<reportElement x="133" y="10" width="289" height="30" uuid="34199ca5-67eb-499b-804c-1d9b9381b185"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="24"/>
+				</textElement>
+				<text><![CDATA[Cheque Courier Schedule]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="40" width="100" height="22" uuid="7188a481-24bb-45b6-8f7c-33ec358b0c78"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Payment Division]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="127" y="80" width="132" height="20" uuid="d5e9266c-1fd7-4ace-996c-b890ddde058a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="57" y="80" width="62" height="20" uuid="d61aee7d-463e-4199-95f0-46aa7d5e2522"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="127" y="110" width="132" height="20" uuid="cf495b6d-7c6a-479c-93a1-59f4d7e91fcc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{User}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="57" y="110" width="62" height="20" uuid="73d0046c-a876-4446-87dc-7b17d37a73dd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[User : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="80" width="120" height="20" uuid="344cf572-3de8-4a6e-99ba-55e7f8e50f59"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Branch}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="80" width="62" height="20" uuid="cb4fb085-41c0-431c-a02c-fbcb97b4107b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Branch : ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="7b7746b9-74ec-456b-a594-4bd89e876bb2"/>
+			</line>
+			<line>
+				<reportElement x="444" y="0" width="1" height="30" uuid="eb01177e-bde4-40af-9ad3-c115fc7d1874">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="30" uuid="f98d458e-df62-41ee-9522-7b1f4d559303">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="364" y="0" width="1" height="30" uuid="43ebf71f-ad6c-4581-9d82-be899d96056a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="160" y="0" width="1" height="30" uuid="c75c0e2a-bcdf-4d4a-a1eb-a335c4f829d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="30" uuid="c4d3a476-3f38-43b5-9174-373aaa16a2ae">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="42" y="0" width="1" height="30" uuid="91554162-ba98-4c3d-b512-d9bba96e6c7b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="17bfabf9-5e16-4761-9fe8-2130e3a771c9"/>
+			</line>
+			<staticText>
+				<reportElement x="50" y="0" width="100" height="30" uuid="2330b48f-fb6b-4623-a274-b34f81e2986c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db796395-2a09-45f6-9f31-75ae2466743c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Facility No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="0" width="35" height="30" uuid="ce425849-db01-4d50-bd1a-0a1037358f89">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db796395-2a09-45f6-9f31-75ae2466743c"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="187" height="30" uuid="24aca21e-3995-422c-b48e-bb1250aadeb9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a09c86fb-e9e0-4cf9-a55c-04228517e763"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Cheque Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="0" width="70" height="30" uuid="3c6050e9-6a06-4d24-97a5-db3776a4e771">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4331cdea-3703-4283-9f72-cfc90e4f8650"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Cheque No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="30" uuid="1b6c8277-5266-474b-a451-a420536c2b0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c4d5164-2d99-4d54-8e4d-caf1e8eb467c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<text><![CDATA[Cheque Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="26611e50-e8a3-4ed5-9094-8e4a18ec3ec9"/>
+			</line>
+			<line>
+				<reportElement x="42" y="0" width="1" height="30" uuid="68c2c4e2-ee79-40cb-bd23-2a72de1b4e3c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="30" uuid="5505c623-81c1-4e78-b453-d5b7240ceb89">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="160" y="0" width="1" height="30" uuid="b6895423-33ae-40d7-acb1-6ee8495c9aee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="364" y="0" width="1" height="30" uuid="0dd7cb33-0d62-4bb5-a1fa-f76f91f85557">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="444" y="0" width="1" height="30" uuid="2dcf1c41-d9f4-4f08-bc25-d216458a2901">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="30" uuid="46621eaa-fc45-42db-9c5e-03a94d8a87ee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="4" y="0" width="35" height="30" uuid="940e3f15-9483-4030-b4fa-9986d5f3a7d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{count} ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="100" height="30" uuid="62988d1a-09c3-4eab-912b-3535db7c9d0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db796395-2a09-45f6-9f31-75ae2466743c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facilityNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="187" height="30" uuid="83a82b08-abab-4382-9c0d-4e0f9a54a823">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a09c86fb-e9e0-4cf9-a55c-04228517e763"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chequeType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="0" width="70" height="30" uuid="33b17806-dff6-4434-a321-0c761d3fdf40">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4331cdea-3703-4283-9f72-cfc90e4f8650"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chequeNo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="450" y="0" width="100" height="30" uuid="e5d45a78-4d69-4e8c-8de1-5174bdcc3de7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c4d5164-2d99-4d54-8e4d-caf1e8eb467c"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chequeAmount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="355" y="0" width="100" height="30" uuid="7b38aa16-c079-4246-bf77-b857d80ddd5a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="455" y="0" width="100" height="30" uuid="79059276-1499-4694-a396-ce1b442750e3"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

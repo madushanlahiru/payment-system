@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>F:\New folder\Payment System Release_2.6\PaymentSystem_v2.jar</jar>
+  <outfile>F:\New folder\Payment System Release_2.6\Payment System.exe</outfile>
+  <errTitle>Please download and install Java 1.8.0 or above to use this software.</errTitle>
+  <cmdLine></cmdLine>
+  <chdir></chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>F:\New folder\Payment System Release_2.6\images\vallibel_logo_icon.ico</icon>
+  <singleInstance>
+    <mutexName>paymentSystem</mutexName>
+    <windowTitle>Payment System</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>2.6.0.0</fileVersion>
+    <txtFileVersion>2.6.0.0</txtFileVersion>
+    <fileDescription>Payment System</fileDescription>
+    <copyright>© The MIT License 2021</copyright>
+    <productVersion>2.6.0.0</productVersion>
+    <txtProductVersion>2.6.0.0</txtProductVersion>
+    <productName>Payment System</productName>
+    <companyName>Vallibel Finance PLC</companyName>
+    <internalName>Payments Division</internalName>
+    <originalFilename>Payment System.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>

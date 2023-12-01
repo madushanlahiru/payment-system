@@ -1,0 +1,16 @@
+
+#
+/build/
+/dist/
+/lib/
+/nbproject/
+/logs/
+
+#
+*.class
+*.jar
+
+
+#
+build.xml
+manifest.mf
