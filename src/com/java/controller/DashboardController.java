@@ -29,6 +29,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -47,11 +48,12 @@ public class DashboardController {
         String sql = "SELECT user_name FROM page_access";
         PreparedStatement statement = connection.getDBConnection().prepareStatement(sql);
         ResultSet resultSet = statement.executeQuery();
-        
-        String[] users = new String[resultSet.getFetchSize() + 1];
+
+        String[] users = new String[5];
         while (resultSet.next()) {
             users[resultSet.getRow() - 1] = resultSet.getString("user_name");
         }
+
         return users;
     }
     

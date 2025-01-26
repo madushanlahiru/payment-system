@@ -33,7 +33,7 @@ public class Dashboard extends javax.swing.JFrame {
         try {
             String[] users = controller.getPageAccessUsers();
             for(String user : users) {
-                if (user.equals(System.getProperty("user.name"))) {
+                if (user != null && user.equals(System.getProperty("user.name"))) {
                     btn_statistics.setVisible(true);
                     btn_editRecords.setVisible(true);
                     btn_editCourierDetails.setVisible(true);
