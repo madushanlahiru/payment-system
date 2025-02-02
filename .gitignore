@@ -2,8 +2,6 @@
 #
 /build/
 /dist/
-/lib/
-/nbproject/
 /logs/
 
 #
@@ -12,5 +10,4 @@
 
 
 #
-build.xml
 manifest.mf
