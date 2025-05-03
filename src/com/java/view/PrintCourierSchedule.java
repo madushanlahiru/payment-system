@@ -23,6 +23,7 @@
  */
 package com.java.view;
 
+import com.java.CommonLogger;
 import com.java.CustomJRViewer;
 import com.java.controller.CourierScheduleController;
 import com.java.entity.CourierSchedule;
@@ -52,6 +53,8 @@ public class PrintCourierSchedule extends javax.swing.JFrame {
 
     private CourierScheduleController controller;
     private Map<String, String> branchList;
+    
+    private CommonLogger logger = new CommonLogger(PrintCourierSchedule.class.getName());
 
     /**
      * Creates new form PrintCourierSchedule
@@ -67,6 +70,7 @@ public class PrintCourierSchedule extends javax.swing.JFrame {
             branchList = controller.getBranchList();
             branchList.values().forEach(branch -> cbBranch.addItem(branch));
         } catch (SQLException ex) {
+            logger.getLogger().log(Level.SEVERE, ex.getMessage(), ex);
             Logger.getLogger(PrintCourierSchedule.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -237,6 +241,7 @@ public class PrintCourierSchedule extends javax.swing.JFrame {
                 List<CourierScheduleRecords> details = controller.getTableDetails(cbBranch.getSelectedItem().toString(), txtFromDate.getDate());
                 setDataToTable(details);
             } catch (SQLException ex) {
+                logger.getLogger().log(Level.SEVERE, ex.getMessage(), ex);
                 Logger.getLogger(PrintCourierSchedule.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -272,6 +277,7 @@ public class PrintCourierSchedule extends javax.swing.JFrame {
                 int scheduleId = controller.saveSchedule(schedule);
                 controller.updateScheduleIdAndStatus(records, scheduleId);
             } catch (SQLException ex) {
+                logger.getLogger().log(Level.SEVERE, ex.getMessage(), ex);
                 Logger.getLogger(PrintCourierSchedule.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -344,8 +350,9 @@ public class PrintCourierSchedule extends javax.swing.JFrame {
             viewer.add(viewer1);
             viewer.setVisible(true);
 
-        } catch (JRException e) {
-            e.printStackTrace();
+        } catch (JRException ex) {
+            logger.getLogger().log(Level.SEVERE, ex.getMessage(), ex);
+            Logger.getLogger(PrintCourierSchedule.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
