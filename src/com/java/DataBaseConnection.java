@@ -37,7 +37,7 @@ public class DataBaseConnection {
 //    return DriverManager.getConnection("jdbc:mysql://192.168.100.15:3306/payment_system_test", "user", "INS@vf*00");
     
     // Production Database
-     return DriverManager.getConnection("jdbc:mysql://192.168.100.15:3306/payment_system", "user", "payments@VFPLC");
+     return DriverManager.getConnection("jdbc:mysql://192.168.46.141:3306/payment_system", "user", "payments@VFPLC");
   }
 
   public void DBClose() throws SQLException {
